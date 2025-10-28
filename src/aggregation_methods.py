@@ -3,7 +3,7 @@ Implementation of different aggregation methods with varying inference protectio
 """
 import numpy as np
 from typing import List, Dict, Any, Optional, Tuple
-from database import db
+from src.database import db
 import hashlib
 
 

@@ -12,68 +12,65 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
             min-height: 100vh;
             padding: 20px;
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
             background: white;
-            border-radius: 10px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-            overflow: hidden;
+            border: 1px solid #ddd;
         }
 
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 30px;
+            
+            color: black;
+            padding: 20px;
             text-align: center;
+            border-bottom: 1px solid #ddd;
         }
 
         header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
+            font-size: 1.8em;
+            margin-bottom: 5px;
+            font-weight: normal;
         }
 
         header p {
-            font-size: 1.1em;
-            opacity: 0.9;
+            font-size: 0.9em;
         }
 
         .tabs {
             display: flex;
-            background: #f5f5f5;
-            border-bottom: 2px solid #ddd;
+            background: #f0f0f0;
+            border-bottom: 1px solid #ccc;
         }
 
         .tab {
             flex: 1;
-            padding: 20px;
+            padding: 12px;
             text-align: center;
             cursor: pointer;
-            transition: all 0.3s;
-            font-weight: 600;
             border: none;
             background: transparent;
-            font-size: 1em;
+            font-size: 0.9em;
+            color:#333
         }
 
         .tab:hover {
-            background: #e0e0e0;
+            background: #e8e8e8;
         }
 
         .tab.active {
             background: white;
-            border-bottom: 3px solid #667eea;
-            color: #667eea;
+            border-bottom: 2px solid #333;
         }
 
         .tab-content {
-            padding: 30px;
+            padding: 20px;
             display: none;
         }
 
@@ -82,177 +79,157 @@
         }
 
         .section {
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
 
         .section h2 {
             color: #333;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #667eea;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #ddd;
+            font-size: 1.3em;
+            font-weight: normal;
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         label {
             display: block;
-            margin-bottom: 5px;
-            font-weight: 600;
+            margin-bottom: 4px;
             color: #555;
         }
 
         input, select, textarea {
             width: 100%;
-            padding: 12px;
-            border: 2px solid #ddd;
-            border-radius: 5px;
-            font-size: 1em;
-            transition: border-color 0.3s;
+            padding: 8px;
+            border: 1px solid #ccc;
+            font-size: 0.95em;
         }
 
         input:focus, select:focus, textarea:focus {
             outline: none;
-            border-color: #667eea;
+            border-color: #666;
         }
 
         textarea {
-            font-family: 'Courier New', monospace;
+            font-family: monospace;
             resize: vertical;
-            min-height: 100px;
+            min-height: 80px;
         }
 
         button {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #555;
             color: white;
-            padding: 12px 30px;
+            padding: 10px 20px;
             border: none;
-            border-radius: 5px;
-            font-size: 1em;
-            font-weight: 600;
+            font-size: 0.95em;
             cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
         }
 
         button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-        }
-
-        button:active {
-            transform: translateY(0);
+            background: #333;
         }
 
         button:disabled {
             background: #ccc;
             cursor: not-allowed;
-            transform: none;
         }
 
         .results {
-            background: #f9f9f9;
-            border: 2px solid #ddd;
-            border-radius: 5px;
-            padding: 20px;
-            margin-top: 20px;
-            max-height: 600px;
+            background: #fafafa;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-top: 15px;
+            max-height: 500px;
             overflow-y: auto;
         }
 
         .results pre {
             background: #2d2d2d;
-            color: #f8f8f2;
-            padding: 15px;
-            border-radius: 5px;
+            color: #ddd;
+            padding: 12px;
             overflow-x: auto;
-            font-size: 0.9em;
+            font-size: 0.85em;
         }
 
         .success {
-            color: #28a745;
-            font-weight: bold;
+            color: #2a6f2a;
         }
 
         .failure {
-            color: #dc3545;
-            font-weight: bold;
+            color: #a33;
         }
 
         .warning {
-            color: #ffc107;
-            font-weight: bold;
+            color: #996600;
         }
 
         .info-box {
-            background: #e7f3ff;
-            border-left: 4px solid #2196F3;
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 5px;
+            background: #f9f9f9;
+            border-left: 3px solid #666;
+            padding: 12px;
+            margin-bottom: 15px;
         }
 
         .info-box h3 {
-            color: #2196F3;
-            margin-bottom: 10px;
+            color: #333;
+            margin-bottom: 6px;
+            font-size: 1.1em;
+            font-weight: normal;
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-bottom: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            margin-bottom: 15px;
         }
 
         .card {
             background: white;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            padding: 20px;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+            padding: 15px;
         }
 
         .card h3 {
-            color: #667eea;
-            margin-bottom: 10px;
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+            font-weight: normal;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 15px;
+            margin-top: 12px;
         }
 
         th, td {
-            padding: 12px;
+            padding: 10px;
             text-align: left;
             border-bottom: 1px solid #ddd;
         }
 
         th {
-            background: #667eea;
-            color: white;
-            font-weight: 600;
+            background: #f5f5f5;
+            color: #333;
         }
 
         tr:hover {
-            background: #f5f5f5;
+            background: #fafafa;
         }
 
         .loading {
             display: inline-block;
-            width: 20px;
-            height: 20px;
-            border: 3px solid #f3f3f3;
-            border-top: 3px solid #667eea;
+            width: 16px;
+            height: 16px;
+            border: 2px solid #ddd;
+            border-top: 2px solid #555;
             border-radius: 50%;
             animation: spin 1s linear infinite;
-            margin-left: 10px;
+            margin-left: 8px;
         }
 
         @keyframes spin {
@@ -262,39 +239,42 @@
 
         .badge {
             display: inline-block;
-            padding: 5px 10px;
-            border-radius: 3px;
+            padding: 3px 8px;
             font-size: 0.85em;
-            font-weight: 600;
+            border: 1px solid;
         }
 
         .badge-success {
-            background: #d4edda;
-            color: #155724;
+            background: #eee;
+            color: #2a6f2a;
+            border-color: #ccc;
         }
 
         .badge-danger {
-            background: #f8d7da;
-            color: #721c24;
+            background: #eee;
+            color: #a33;
+            border-color: #ccc;
         }
 
         .badge-warning {
-            background: #fff3cd;
-            color: #856404;
+            background: #eee;
+            color: #996600;
+            border-color: #ccc;
         }
 
         .badge-info {
-            background: #d1ecf1;
-            color: #0c5460;
+            background: #eee;
+            color: #555;
+            border-color: #ccc;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>🔒 Inference-Safe Aggregation</h1>
-            <p>Database Security Project: Least Privilege, Polyinstantiation & Aggregation Methods</p>
-            <p style="font-size: 0.9em; margin-top: 10px;">By: Ammar Tojaga & Andres Angel</p>
+            <h1>Inference-Safe Aggregation</h1>
+            <p>Database Security Project</p>
+            <p style="font-size: 0.85em; margin-top: 8px;">Ammar Tojaga & Andres Angel</p>
         </header>
 
         <div class="tabs">
@@ -311,14 +291,13 @@
                 <h2>Project Overview</h2>
                 <div class="info-box">
                     <h3>What is Inference-Safe Aggregation?</h3>
-                    <p>This project demonstrates how attackers can infer sensitive information from database aggregation queries, and explores various methods to prevent such attacks.</p>
+                    <p>This project demonstrates how attackers can infer sensitive information from database aggregation queries and methods to prevent such attacks.</p>
                 </div>
 
                 <div class="grid">
                     <div class="card">
-                        <h3>🎯 Inference Attacks</h3>
-                        <p>Techniques attackers use to deduce sensitive information:</p>
-                        <ul style="margin-top: 10px; padding-left: 20px;">
+                        <h3>Inference Attacks</h3>
+                        <ul style="margin-top: 8px; padding-left: 20px;">
                             <li>Differencing Attack</li>
                             <li>Tracker Attack</li>
                             <li>SUM-based Attack</li>
@@ -327,9 +306,8 @@
                     </div>
 
                     <div class="card">
-                        <h3>🛡️ Protection Methods</h3>
-                        <p>Security mechanisms implemented:</p>
-                        <ul style="margin-top: 10px; padding-left: 20px;">
+                        <h3>Protection Methods</h3>
+                        <ul style="margin-top: 8px; padding-left: 20px;">
                             <li>Minimum Result Size</li>
                             <li>Differential Privacy</li>
                             <li>Overlap Control</li>
@@ -338,9 +316,8 @@
                     </div>
 
                     <div class="card">
-                        <h3>🔐 Polyinstantiation</h3>
-                        <p>Multiple versions of data for different clearance levels:</p>
-                        <ul style="margin-top: 10px; padding-left: 20px;">
+                        <h3>Polyinstantiation</h3>
+                        <ul style="margin-top: 8px; padding-left: 20px;">
                             <li>Level 1: Basic access</li>
                             <li>Level 2: Moderate access</li>
                             <li>Level 3: Full access</li>
@@ -348,9 +325,8 @@
                     </div>
 
                     <div class="card">
-                        <h3>👤 Least Privilege</h3>
-                        <p>Role-based access control:</p>
-                        <ul style="margin-top: 10px; padding-left: 20px;">
+                        <h3>Least Privilege</h3>
+                        <ul style="margin-top: 8px; padding-left: 20px;">
                             <li>Basic Employee</li>
                             <li>Department Manager</li>
                             <li>HR Administrator</li>
@@ -374,14 +350,13 @@
                 <h2>Inference Attack Demonstrations</h2>
                 
                 <div class="info-box">
-                    <h3>ℹ️ About Inference Attacks</h3>
-                    <p>Inference attacks exploit aggregation queries to deduce sensitive individual information. This tab demonstrates various attack techniques.</p>
+                    <h3>About Inference Attacks</h3>
+                    <p>Inference attacks exploit aggregation queries to deduce sensitive individual information.</p>
                 </div>
 
                 <!-- Differencing Attack -->
                 <div class="card" style="margin-bottom: 20px;">
                     <h3>1. Differencing Attack</h3>
-                    <p>Infer individual salary by comparing aggregate results with and without target employee.</p>
                     
                     <div class="form-group">
                         <label>Target Employee:</label>
@@ -401,7 +376,6 @@
                 <!-- Tracker Attack -->
                 <div class="card" style="margin-bottom: 20px;">
                     <h3>2. Tracker Attack</h3>
-                    <p>Determine if an employee's salary exceeds a threshold using COUNT queries.</p>
                     
                     <div class="form-group">
                         <label>Target Employee:</label>
@@ -421,7 +395,6 @@
                 <!-- Comprehensive Attack Suite -->
                 <div class="card">
                     <h3>3. Run All Attacks</h3>
-                    <p>Execute comprehensive attack suite including all attack types.</p>
                     
                     <button onclick="runAllAttacks()">Run Complete Attack Suite</button>
                     
@@ -436,8 +409,8 @@
                 <h2>Aggregation Method Comparison</h2>
                 
                 <div class="info-box">
-                    <h3>ℹ️ Compare Protection Methods</h3>
-                    <p>Test how different aggregation protection methods handle the same query. Some methods may block queries, others may add noise or suppress results.</p>
+                    <h3>Compare Protection Methods</h3>
+                    <p>Test how different aggregation protection methods handle the same query.</p>
                 </div>
 
                 <div class="form-group">
@@ -457,8 +430,8 @@
                 <h2>Polyinstantiation Demonstration</h2>
                 
                 <div class="info-box">
-                    <h3>ℹ️ What is Polyinstantiation?</h3>
-                    <p>Polyinstantiation creates multiple versions of the same record for different clearance levels. Users with lower clearance see "cover story" data, while high-clearance users see real data.</p>
+                    <h3>What is Polyinstantiation?</h3>
+                    <p>Polyinstantiation creates multiple versions of the same record for different clearance levels.</p>
                 </div>
 
                 <!-- Show Different Views -->
@@ -478,7 +451,6 @@
                 <!-- Test Attack with Polyinstantiation -->
                 <div class="card">
                     <h3>2. Test Inference Attack with Polyinstantiation</h3>
-                    <p>See how polyinstantiation protects against inference attacks by showing false data.</p>
                     
                     <div class="form-group">
                         <label>Department:</label>
@@ -507,8 +479,8 @@
                 <h2>Least Privilege Demonstration</h2>
                 
                 <div class="info-box">
-                    <h3>ℹ️ Principle of Least Privilege</h3>
-                    <p>Users should only have access to the minimum data required for their role. This demonstrates how different roles have different access levels.</p>
+                    <h3>Principle of Least Privilege</h3>
+                    <p>Users should only have access to the minimum data required for their role.</p>
                 </div>
 
                 <!-- Role Selection -->
@@ -533,7 +505,6 @@
                 <!-- Compare All Roles -->
                 <div class="card">
                     <h3>2. Compare All Roles</h3>
-                    <p>Generate an access control matrix showing what each role can and cannot access.</p>
                     
                     <button onclick="compareAllRoles()">Compare All Roles</button>
                     
@@ -544,24 +515,17 @@
     </div>
 
     <script>
-        // Tab switching
         function showTab(tabName) {
-            // Hide all tabs
             const tabs = document.querySelectorAll('.tab-content');
             tabs.forEach(tab => tab.classList.remove('active'));
-            
-            // Remove active class from all tab buttons
+
             const tabButtons = document.querySelectorAll('.tab');
             tabButtons.forEach(btn => btn.classList.remove('active'));
-            
-            // Show selected tab
+
             document.getElementById(tabName).classList.add('active');
-            
-            // Add active class to clicked button
             event.target.classList.add('active');
         }
 
-        // Load database statistics on page load
         window.onload = function() {
             loadDatabaseStats();
         };
@@ -593,7 +557,6 @@
                 });
         }
 
-        // Differencing Attack
         function runDifferencingAttack() {
             const target = document.getElementById('diff-target').value;
             const dept = document.getElementById('diff-dept').value;
@@ -641,7 +604,6 @@
             });
         }
 
-        // Tracker Attack
         function runTrackerAttack() {
             const target = document.getElementById('tracker-target').value;
             const threshold = document.getElementById('tracker-threshold').value;
@@ -690,7 +652,6 @@
             });
         }
 
-        // Run All Attacks
         function runAllAttacks() {
             const resultsDiv = document.getElementById('all-attacks-results');
             
@@ -735,7 +696,6 @@
             });
         }
 
-        // Compare Aggregation Methods
         function compareAggregation() {
             const query = document.getElementById('agg-query').value;
             const resultsDiv = document.getElementById('agg-results');
@@ -786,7 +746,6 @@
             });
         }
 
-        // Demonstrate Polyinstantiation
         function demonstratePolyinstantiation() {
             const employee = document.getElementById('poly-employee').value;
             const resultsDiv = document.getElementById('poly-demo-results');
@@ -812,13 +771,13 @@
                         const levelData = result[`level_${level}`];
                         if (levelData) {
                             const isCover = result.actual && levelData.salary !== result.actual.salary;
-                            const statusBadge = isCover ? 
-                                '<span class="badge badge-warning">Cover Story</span>' : 
+                            const statusBadge = isCover ?
+                                '<span class="badge badge-warning">Cover Story</span>' :
                                 '<span class="badge badge-success">Real Data</span>';
-                            
+
                             html += `<tr>`;
                             html += `<td>Level ${level}</td>`;
-                            html += `<td>$${levelData.salary.toFixed(2)}</td>`;
+                            html += `<td>$${(parseFloat(levelData.salary) || 0).toFixed(2)}</td>`;
                             html += `<td>${statusBadge}</td>`;
                             html += `</tr>`;
                         }
@@ -827,7 +786,7 @@
                     if (result.actual) {
                         html += `<tr style="background: #e7f3ff; font-weight: bold;">`;
                         html += `<td>Actual (Ground Truth)</td>`;
-                        html += `<td>$${result.actual.salary.toFixed(2)}</td>`;
+                        html += `<td>$${(parseFloat(result.actual.salary) || 0).toFixed(2)}</td>`;
                         html += `<td><span class="badge badge-info">True Value</span></td>`;
                         html += `</tr>`;
                     }
@@ -845,7 +804,6 @@
             });
         }
 
-        // Test Polyinstantiation Attack
         function testPolyAttack() {
             const dept = document.getElementById('poly-dept').value;
             const clearance = document.getElementById('poly-clearance').value;
@@ -896,7 +854,6 @@
             });
         }
 
-        // Demonstrate Least Privilege
         function demonstrateLeastPrivilege() {
             const role = document.getElementById('lp-role').value;
             const resultsDiv = document.getElementById('lp-demo-results');
@@ -960,7 +917,6 @@
             });
         }
 
-        // Compare All Roles
         function compareAllRoles() {
             const resultsDiv = document.getElementById('lp-compare-results');
             

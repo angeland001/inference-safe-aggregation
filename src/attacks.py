@@ -2,7 +2,7 @@
 Implementation of inference attacks on aggregated data
 """
 from typing import List, Dict, Any, Optional, Tuple
-from database import db
+from src.database import db
 import numpy as np
 
 

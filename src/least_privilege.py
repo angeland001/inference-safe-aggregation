@@ -2,7 +2,7 @@
 Least privilege implementation and demonstration
 """
 from typing import Dict, Any, List
-from database import db
+from src.database import db
 
 
 class LeastPrivilege:
@@ -72,7 +72,7 @@ class LeastPrivilege:
         query1 = "SELECT * FROM employees LIMIT 5"
         try:
             data = self.db.execute_query(query1, user=user, password=password)
-            print(f"  ✓ SUCCESS: Retrieved {len(data)} records")
+            print(f"  [OK] SUCCESS: Retrieved {len(data)} records")
             print(f"    Columns visible: {list(data[0].keys()) if data else 'none'}")
             results['queries'].append({
                 'query': query1,
@@ -81,7 +81,7 @@ class LeastPrivilege:
                 'columns': list(data[0].keys()) if data else []
             })
         except Exception as e:
-            print(f"  ✗ DENIED: {str(e)[:100]}")
+            print(f"  [X] DENIED: {str(e)[:100]}")
             results['queries'].append({
                 'query': query1,
                 'success': False,
@@ -95,7 +95,7 @@ class LeastPrivilege:
         query2 = "SELECT name, salary FROM employees WHERE name = 'Alice Johnson'"
         try:
             data = self.db.execute_query(query2, user=user, password=password)
-            print(f"  ✓ SUCCESS: Retrieved salary data")
+            print(f"  [OK] SUCCESS: Retrieved salary data")
             if data:
                 print(f"    {data[0]['name']}: ${data[0]['salary']:,.2f}")
             results['queries'].append({
@@ -104,7 +104,7 @@ class LeastPrivilege:
                 'data': data
             })
         except Exception as e:
-            print(f"  ✗ DENIED: {str(e)[:100]}")
+            print(f"  [X] DENIED: {str(e)[:100]}")
             results['queries'].append({
                 'query': query2,
                 'success': False,
@@ -126,7 +126,7 @@ class LeastPrivilege:
         
         try:
             data = self.db.execute_query(query3, user=user, password=password)
-            print(f"  ✓ SUCCESS: Retrieved {len(data) if isinstance(data, list) else 1} records")
+            print(f"  [OK] SUCCESS: Retrieved {len(data) if isinstance(data, list) else 1} records")
             if data:
                 print(f"    Columns: {list(data[0].keys())}")
             results['queries'].append({
@@ -135,7 +135,7 @@ class LeastPrivilege:
                 'records': len(data) if isinstance(data, list) else 1
             })
         except Exception as e:
-            print(f"  ✗ DENIED: {str(e)[:100]}")
+            print(f"  [X] DENIED: {str(e)[:100]}")
             results['queries'].append({
                 'query': query3,
                 'success': False,
@@ -149,7 +149,7 @@ class LeastPrivilege:
         query4 = "SELECT department, AVG(salary) as avg_sal FROM employees GROUP BY department"
         try:
             data = self.db.execute_query(query4, user=user, password=password)
-            print(f"  ✓ SUCCESS: Retrieved aggregate data")
+            print(f"  [OK] SUCCESS: Retrieved aggregate data")
             for row in data[:3]:
                 print(f"    {row['department']}: ${row['avg_sal']:,.2f}")
             results['queries'].append({
@@ -158,7 +158,7 @@ class LeastPrivilege:
                 'data': data
             })
         except Exception as e:
-            print(f"  ✗ DENIED: {str(e)[:100]}")
+            print(f"  [X] DENIED: {str(e)[:100]}")
             results['queries'].append({
                 'query': query4,
                 'success': False,
@@ -211,7 +211,7 @@ class LeastPrivilege:
             row = f"{action:<40}"
             for role in ['basic_employee', 'dept_manager', 'hr_admin', 'analyst']:
                 success = comparison[role]['queries'][i]['success']
-                row += f" {'✓':<10}" if success else f" {'✗':<10}"
+                row += f" {'[OK]':<10}" if success else f" {'[X]':<10}"
             print(row)
         
         print("="*80 + "\n")

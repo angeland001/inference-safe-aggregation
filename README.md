@@ -42,7 +42,7 @@ DB_HOST=localhost
 DB_PORT=5432
 DB_NAME=inference_demo
 DB_USER=postgres
-DB_PASSWORD=your_password
+DB_PASSWORD=angel
 SECRET_KEY=your-secret-key-here
 ```
 
@@ -194,5 +194,5 @@ DB_HOST=localhost
 DB_PORT=5432
 DB_NAME=inference_demo
 DB_USER=postgres
-DB_PASSWORD=your_password_here
+DB_PASSWORD=angel
 SECRET_KEY=your-secret-key-change-in-production
